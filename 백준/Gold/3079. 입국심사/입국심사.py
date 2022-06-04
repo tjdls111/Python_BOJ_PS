@@ -18,7 +18,7 @@ def calculate_screening_cnt(time: int) -> int:
     return cnt
 
 
-while left < right:
+while left <= right:
     mid = (right + left) // 2
 
     can_screening_cnt = calculate_screening_cnt(mid)
@@ -27,6 +27,6 @@ while left < right:
 
     else:
         ans = min(ans, mid)
-        right = mid
+        right = mid - 1
 
 print(ans)
